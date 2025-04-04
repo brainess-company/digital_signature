@@ -51,4 +51,5 @@
     'installable': True,
     'auto_install': False,
     'application': False,
+    'i18n': ['i18n/pt_BR.po'],
 }

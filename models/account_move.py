@@ -61,13 +61,12 @@ class AccountMove(models.Model):
         return self.env['ir.config_parameter'].sudo().get_param(
             'digital_signature.show_company_stamp_bill')
 
-    digital_sign = fields.Binary(string='Signature',
-                                 help="Signature of accounting management "
-                                      "person")
-    sign_by = fields.Char(string='Signed By', help="Name of signed person")
-    designation = fields.Char(string='Designation',
-                              help="Designation for signed person")
-    sign_on = fields.Datetime(string='Signed On', help="Date of sign")
+    digital_sign = fields.Binary(string=_('Signature'),
+                                 help=_("Signature of accounting management person"))
+    sign_by = fields.Char(string=_('Signed By'), help=_("Name of signed person"))
+    designation = fields.Char(string=_('Designation'),
+                              help=_("Designation for signed person"))
+    sign_on = fields.Datetime(string=_('Signed On'), help=_("Date of sign"))
     show_signature = fields.Boolean('Show Signature',
                                     default=_default_show_signature,
                                     compute='_compute_show_signature',

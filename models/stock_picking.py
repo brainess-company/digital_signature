@@ -18,7 +18,7 @@
 #    If not, see <http://www.gnu.org/licenses/>.
 #
 #############################################################################
-from odoo import fields, models
+from odoo import fields, models, api, _
 from odoo.exceptions import UserError
 
 
@@ -42,14 +42,13 @@ class StockPicking(models.Model):
         return self.env['ir.config_parameter'].sudo().get_param(
             'digital_signature.show_company_stamp_inventory')
 
-    digital_sign = fields.Binary(string='Signature',
-                                 help="Signature of inventory "
-                                      "management person")
-    sign_by = fields.Char(string='Signed By',
-                          help="Name of signed person")
-    designation = fields.Char(string='Designation',
-                              help="Designation for signed person")
-    sign_on = fields.Datetime(string='Signed On', help="Date of sign")
+    digital_sign = fields.Binary(string=_('Signature'),
+                                 help=_("Signature of inventory management person"))
+    sign_by = fields.Char(string=_('Signed By'),
+                          help=_("Name of signed person"))
+    designation = fields.Char(string=_('Designation'),
+                              help=_("Designation for signed person"))
+    sign_on = fields.Datetime(string=_('Signed On'), help=_("Date of sign"))
     show_sign = fields.Boolean(default=_default_show_sign,
                                compute='_compute_show_sign',
                                help="Field to get the value in setting to "

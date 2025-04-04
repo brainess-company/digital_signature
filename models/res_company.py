@@ -18,7 +18,7 @@
 #    If not, see <http://www.gnu.org/licenses/>.
 #
 #############################################################################
-from odoo import fields, models
+from odoo import fields, models, _
 
 
 class ResCompany(models.Model):
@@ -27,11 +27,10 @@ class ResCompany(models.Model):
     _inherit = 'res.company'
     _description = 'Company'
 
-    stamp = fields.Binary(string="Stamp", help="Company stamp")
+    stamp = fields.Binary(string=_("Stamp"), help=_("Company stamp"))
     position = fields.Selection(selection=[
-        ('left', 'Left'),
-        ('right', 'Right'),
-        ('center', 'Center'),
-    ], string='Position', tracking=True, default="left",
-        help="The position is used  to position the  signature and company "
-             "stamp in reports")
+        ('left', _('Left')),
+        ('right', _('Right')),
+        ('center', _('Center')),
+    ], string=_('Position'), tracking=True, default="left",
+        help=_("The position is used to position the signature and company stamp in reports"))
