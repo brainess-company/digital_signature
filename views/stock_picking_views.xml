@@ -16,7 +16,7 @@
                     <field name="sign_applicable" invisible="1"/>
                     <group name="inventory_signature" string="Digital Signature"
                            attrs="{'invisible': [('show_sign','=',False)]}">
-                        <field name="digital_sign"/>
+                        <field name="digital_sign" widget="signature"/>
                         <field name="sign_by"
                                attrs="{'invisible': [('enable_option','=',
                            False)]}"/>

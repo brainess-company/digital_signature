@@ -14,7 +14,7 @@
                            attrs="{'invisible': [('show_signature','=',False)]}">
                         <field name="show_signature" invisible="1"/>
                         <field name="enable_sign" invisible="1"/>
-                        <field name="digital_sign"/>
+                        <field name="digital_sign" widget="signature"/>
                         <field name="sign_by"
                                attrs="{'invisible': [
                                ('enable_sign','=',False)]}"
