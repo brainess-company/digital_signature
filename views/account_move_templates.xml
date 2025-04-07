@@ -10,7 +10,7 @@
                         <t t-if="o.move_type == 'out_invoice' and o.stamp_invoicing =='customer_invoice'">
                             <t t-if="o.show_stamp_invoice and o.company_id.stamp">
                                 <img t-att-src="image_data_uri(o.company_id.stamp)"
-                                     class="left"/>
+                                     class="left-digital-signature"/>
                             </t>
                             <t t-if="o.show_signature and o.digital_sign" >
                                 <img t-att-src="image_data_uri(o.digital_sign)"
@@ -27,7 +27,7 @@
                         <t t-if="o.move_type == 'in_invoice' and  o.stamp_invoicing =='vendor_bill'">
                             <t t-if="o.show_stamp_invoice and o.company_id.stamp">
                                 <img t-att-src="image_data_uri(o.company_id.stamp)"
-                                     class="left"/>
+                                     class="left-digital-signature"/>
                             </t>
                             <t t-if="o.show_signature and o.digital_sign">
                                 <img t-att-src="image_data_uri(o.digital_sign)"
@@ -44,7 +44,7 @@
                         <t t-if="o.stamp_invoicing =='both'">
                             <t t-if="o.show_stamp_invoice and o.company_id.stamp">
                                 <img t-att-src="image_data_uri(o.company_id.stamp)"
-                                     class="left"/>
+                                     class="left-digital-signature"/>
                             </t>
                             <t t-if="o.show_signature and o.digital_sign">
                                 <img t-att-src="image_data_uri(o.digital_sign)"
@@ -66,11 +66,11 @@
                             <t t-if="o.show_stamp_invoice and o.company_id.stamp">
                                 <img t-att-src="image_data_uri(o.digital_sign)"
                                      style="max-height: 4cm; max-width: 8cm;
-                                 padding-top: 50px;" class="right"/>
+                                 padding-top: 50px;" class="right-digital-signature"/>
                             </t>
                             <t t-if="o.show_signature and o.digital_sign">
                                 <img t-att-src="image_data_uri(o.company_id.stamp)"
-                                     class="right"/>
+                                     class="right-digital-signature"/>
                                 <p t-field="o.sign_by"
                                    style="padding-top: 100px;margin-left: 650px;"/>
                                 <p t-field="o.sign_on"
@@ -83,11 +83,11 @@
                             <t t-if="o.show_stamp_invoice">
                                 <img t-att-src="image_data_uri(o.digital_sign)"
                                      style="max-height: 4cm; max-width: 8cm;
-                                 padding-top: 50px;" class="right"/>
+                                 padding-top: 50px;" class="right-digital-signature"/>
                             </t>
                             <t t-if="o.show_signature and o.digital_sign">
                                 <img t-att-src="image_data_uri(o.company_id.stamp)"
-                                     class="right"/>
+                                     class="right-digital-signature"/>
                                 <p t-field="o.sign_by"
                                    style="padding-top: 100px;margin-left: 650px;"/>
                                 <p t-field="o.sign_on"
@@ -100,11 +100,11 @@
                             <t t-if="o.show_stamp_invoice and o.company_id.stamp">
                                 <img t-att-src="image_data_uri(o.digital_sign)"
                                      style="max-height: 4cm; max-width: 8cm;
-                                 padding-top: 50px;" class="right"/>
+                                 padding-top: 50px;" class="right-digital-signature"/>
                             </t>
                             <t t-if="o.show_signature and o.digital_sign">
                                 <img t-att-src="image_data_uri(o.company_id.stamp)"
-                                     class="right"/>
+                                     class="right-digital-signature"/>
                                 <p t-field="o.sign_by"
                                    style="padding-top: 100px;margin-left: 650px;"/>
                                 <p t-field="o.sign_on"
@@ -120,11 +120,11 @@
                         <t t-if="o.move_type == 'out_invoice' and o.stamp_invoicing =='customer_invoice'">
                             <t t-if="o.show_stamp_invoice and o.company_id.stamp">
                                 <img t-att-src="image_data_uri(o.company_id.stamp)"
-                                     class="center"/>
+                                     class="center-digital-signature"/>
                             </t>
                             <t t-if="o.show_signature and o.digital_sign">
                                 <img t-att-src="image_data_uri(o.digital_sign)"
-                                     class="center_sign"/>
+                                     class="center-digital-signature"/>
                                 <p t-field="o.sign_by" style="margin-left: 420px;
                             margin-top: -10px;"/>
                                 <p t-field="o.sign_on" style="margin-left: 420px;
@@ -136,11 +136,11 @@
                         <t t-if="o.move_type == 'in_invoice' and  o.stamp_invoicing =='vendor_bill'">
                             <t t-if="o.show_stamp_invoice and o.company_id.stamp">
                                 <img t-att-src="image_data_uri(o.company_id.stamp)"
-                                     class="center"/>
+                                     class="center-digital-signature"/>
                             </t>
                             <t t-if="o.show_signature and o.digital_sign">
                                 <img t-att-src="image_data_uri(o.digital_sign)"
-                                     class="center_sign"/>
+                                     class="center-digital-signature"/>
                                 <p t-field="o.sign_by" style="margin-left: 420px;
                             margin-top: -10px;"/>
                                 <p t-field="o.sign_on" style="margin-left: 420px;
@@ -152,11 +152,11 @@
                         <t t-if="o.stamp_invoicing =='both'">
                             <t t-if="o.show_stamp_invoice and o.company_id.stamp">
                                 <img t-att-src="image_data_uri(o.company_id.stamp)"
-                                     class="center"/>
+                                     class="center-digital-signature"/>
                             </t>
                             <t t-if="o.show_signature and o.digital_sign">
                                 <img t-att-src="image_data_uri(o.digital_sign)"
-                                     class="center_sign"/>
+                                     class="center-digital-signature"/>
                                 <p t-field="o.sign_by" style="margin-left: 420px;
                             margin-top: -10px;"/>
                                 <p t-field="o.sign_on" style="margin-left: 420px;

@@ -1,16 +1,16 @@
-.left{
+.left-digital-signature{
 max-height: 4cm;
 max-width: 4cm;
 padding-top: 50px;
 float:left;
 }
-.right {
+.right-digital-signature {
 max-height: 4cm;
 max-width: 4cm;
 padding-top: 50px;
 float:right
 }
-.center {
+.center-digital-signature {
 max-height: 4cm;
 max-width: 4cm;
 padding-top: 50px;

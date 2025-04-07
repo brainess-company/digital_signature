@@ -11,7 +11,7 @@
                         <t t-if="o.company_id.stamp and o.show_stamp_po and
                         o.digital_sign  and o.show_signature">
                             <img t-att-src="image_data_uri(o.company_id.stamp)"
-                                 class="left"/>
+                                 class="left-digital-signature"/>
                             <img t-att-src="image_data_uri(o.digital_sign)"
                                  style="max-height: 4cm; max-width: 6cm;
                                  padding-top: 60px;"/>
@@ -24,7 +24,7 @@
                         </t>
                         <t t-elif="o.company_id.stamp and o.show_stamp_po">
                             <img t-att-src="image_data_uri(o.company_id.stamp)"
-                                 class="left"/>
+                                 class="left-digital-signature"/>
                         </t>
                         <t t-elif="o.digital_sign and o.show_signature">
                             <img t-att-src="image_data_uri(o.digital_sign)"
@@ -45,12 +45,12 @@
                         o.show_stamp_po and o.show_signature">
                             <t t-if="o.company_id.stamp">
                                 <img t-att-src="image_data_uri(o.company_id.stamp)"
-                                     class="right"/>
+                                     class="right-digital-signature"/>
                             </t>
 
                             <img t-att-src="image_data_uri(o.digital_sign)"
                                  style="max-height: 4cm; max-width: 8cm;
-                                 padding-top: 50px;" class="right"/>
+                                 padding-top: 50px;" class="right-digital-signature"/>
                             <p t-field="o.sign_by"
                                style="padding-top: 150px; margin-left: 650px;"/>
                             <p t-field="o.sign_on"
@@ -60,12 +60,12 @@
                         </t>
                         <t t-elif="o.company_id.stamp and o.show_stamp_po">
                             <img t-att-src="image_data_uri(o.company_id.stamp)"
-                                 class="right"/>
+                                 class="right-digital-signature"/>
                         </t>
                         <t t-elif="o.digital_sign and o.show_signature">
                             <img t-att-src="image_data_uri(o.digital_sign)"
                                  style="max-height: 4cm; max-width: 8cm;
-                                 padding-top: 50px;" class="right"/>
+                                 padding-top: 50px;" class="right-digital-signature"/>
                             <p t-field="o.sign_by"
                                style="padding-top: 150px;margin-left:700px;"/>
                             <p t-field="o.sign_on"
@@ -80,7 +80,7 @@
                         <t t-if="o.company_id.stamp and o.digital_sign and
                         o.show_stamp_po and o.show_signature">
                             <img t-att-src="image_data_uri(o.company_id.stamp)"
-                                 class="center"/>
+                                 class="center-digital-signature"/>
                             <img t-att-src="image_data_uri(o.digital_sign)"
                                  class="center_sign"/>
                             <p t-field="o.sign_by" style="margin-left: 420px;
@@ -92,11 +92,11 @@
                         </t>
                         <t t-elif="o.company_id.stamp and o.show_stamp_po">
                             <img t-att-src="image_data_uri(o.company_id.stamp)"
-                                 class="center"/>
+                                 class="center-digital-signature"/>
                         </t>
                         <t t-elif="o.digital_sign and o.show_signature">
                             <img t-att-src="image_data_uri(o.digital_sign)"
-                                 class="center"/>
+                                 class="center-digital-signature"/>
                             <p t-field="o.sign_by" style="margin-left: 320px;
                             margin-top: -10px;"/>
                             <p t-field="o.sign_on" style="margin-left: 320px;
