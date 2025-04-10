@@ -28,6 +28,13 @@ class PurchaseOrder(models.Model):
     _inherit = "purchase.order"
     _description = 'Purchase Order'
 
+    _copy_default = {
+        'digital_sign': False,
+        'sign_by': False,
+        'designation': False,
+        'sign_on': False,
+    }
+
     @api.model
     def _default_show_sign(self):
         """ Returns the value of digital sign from Purchase setting"""
