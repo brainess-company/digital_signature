@@ -28,12 +28,6 @@ class PurchaseOrder(models.Model):
     _inherit = "purchase.order"
     _description = 'Purchase Order'
 
-    _copy_default = {
-        'digital_sign': False,
-        'sign_by': False,
-        'designation': False,
-        'sign_on': False,
-    }
 
     @api.model
     def _default_show_sign(self):
@@ -54,13 +48,17 @@ class PurchaseOrder(models.Model):
             'digital_signature.show_company_stamp_po')
 
     digital_sign = fields.Binary(string=_('Signature'),
-                               help=_("Signature of purchase management person"))
+                               help=_("Signature of purchase management person"),
+                               copy=False)
     sign_by = fields.Char(string=_('Signed By'), 
-                         help=_("Name of signed person"))
+                         help=_("Name of signed person"),
+                         copy=False)
     designation = fields.Char(string=_('Designation'),
-                            help=_("Designation for signed person"))
+                            help=_("Designation for signed person"),
+                            copy=False)
     sign_on = fields.Datetime(string=_('Signed On'), 
-                            help=_("Date of sign"))
+                            help=_("Date of sign"),
+                            copy=False)
     show_signature = fields.Boolean('Show Signature',
                                     default=_default_show_sign,
                                     compute='_compute_show_signature',
